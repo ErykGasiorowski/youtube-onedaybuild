@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF68ADD825BF2F88000ADB84 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF68ADD725BF2F88000ADB84 /* WebKit.framework */; };
 		CF73704625ABA39E00823F8B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF73704525ABA39E00823F8B /* Constants.swift */; };
 		CF73704925ABA78000823F8B /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF73704825ABA78000823F8B /* Video.swift */; };
 		CF73704C25ABA7CE00823F8B /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF73704B25ABA7CE00823F8B /* Model.swift */; };
+		CF739AF725B9F1F900192FF3 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF739AF625B9F1F800192FF3 /* DetailViewController.swift */; };
 		CF76713825B770C500B6B35F /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF76713725B770C500B6B35F /* VideoTableViewCell.swift */; };
 		CF7A2EAF25B899A400B645A2 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7A2EAE25B899A400B645A2 /* CacheManager.swift */; };
 		CFC3131C25AE30F9005180C5 /* ConstantsCopy.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC3131B25AE30F9005180C5 /* ConstantsCopy.swift */; };
@@ -23,9 +25,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CF68ADD725BF2F88000ADB84 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		CF73704525ABA39E00823F8B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CF73704825ABA78000823F8B /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		CF73704B25ABA7CE00823F8B /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		CF739AF625B9F1F800192FF3 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		CF76713725B770C500B6B35F /* VideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
 		CF7A2EAE25B899A400B645A2 /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
 		CFC3131B25AE30F9005180C5 /* ConstantsCopy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsCopy.swift; sourceTree = "<group>"; };
@@ -45,16 +49,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF68ADD825BF2F88000ADB84 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CF68ADD625BF2F88000ADB84 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CF68ADD725BF2F88000ADB84 /* WebKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CF76713225B7705000B6B35F /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				CFD5200425A2603400DCC8F5 /* ViewController.swift */,
+				CF739AF625B9F1F800192FF3 /* DetailViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -101,6 +115,7 @@
 			children = (
 				CFD51FFF25A2603400DCC8F5 /* youtube-onedaybuild */,
 				CFD51FFE25A2603400DCC8F5 /* Products */,
+				CF68ADD625BF2F88000ADB84 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -198,6 +213,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF739AF725B9F1F900192FF3 /* DetailViewController.swift in Sources */,
 				CFD5200525A2603400DCC8F5 /* ViewController.swift in Sources */,
 				CFD5200125A2603400DCC8F5 /* AppDelegate.swift in Sources */,
 				CFD5200325A2603400DCC8F5 /* SceneDelegate.swift in Sources */,
@@ -355,6 +371,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M4948RFH85;
 				INFOPLIST_FILE = "youtube-onedaybuild/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -373,6 +390,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M4948RFH85;
 				INFOPLIST_FILE = "youtube-onedaybuild/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

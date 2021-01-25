@@ -12,24 +12,25 @@ protocol ModelDelegate {
     func videosFetched(_ videos:[Video])
 }
 
+
 class Model {
     
     var delegate:ModelDelegate?
     
     func getVideos() {
         
-        // Create an URL object
+        // Create a URL object
         let url = URL(string: Constants.API_URL)
         
         guard url != nil else{
             return
         }
         
-        // Get an URLSession object
+        // Get a URLSession object
         let session = URLSession.shared
         
-        // Get a data task fro the URLSession object
-        let dataTask = session.dataTask(with: url!) { (data, url, error) in
+        // Get a data task from the URLSession object
+        let dataTask = session.dataTask(with: url!) { (data, response, error) in
             
             // Check if there were any errors
             if error != nil || data == nil {
@@ -37,6 +38,7 @@ class Model {
             }
             
             do {
+                
                 // Parsing the data into video objects
                 let decoder = JSONDecoder()
                 decoder.dateDecodingStrategy = .iso8601
@@ -52,16 +54,17 @@ class Model {
                     }
                 }
                 
-                // dump(response)
+                // dump(response)
             }
             catch {
-                
+                print(error)
             }
             
         }
+        
         // Kick off the task
         dataTask.resume()
+        
     }
-    
     
 }
